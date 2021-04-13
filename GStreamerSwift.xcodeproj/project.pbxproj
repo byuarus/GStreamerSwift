@@ -13,7 +13,33 @@
 		A46394642624F0050098D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46394622624F0050098D2EA /* Main.storyboard */; };
 		A46394662624F0060098D2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46394652624F0060098D2EA /* Assets.xcassets */; };
 		A46394692624F0060098D2EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46394672624F0060098D2EA /* LaunchScreen.storyboard */; };
+		A46394722624F4B00098D2EA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A46394712624F4B00098D2EA /* README.md */; };
+		A46394772624F6DB0098D2EA /* gst_ios_init.m in Sources */ = {isa = PBXBuildFile; fileRef = A46394762624F6DB0098D2EA /* gst_ios_init.m */; };
+		A463948D26251B6B0098D2EA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463948B26251B6B0098D2EA /* CoreVideo.framework */; };
+		A463949226251B870098D2EA /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463949026251B870098D2EA /* CoreAudio.framework */; };
+		A463949926251BB80098D2EA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463949826251BB80098D2EA /* CoreMedia.framework */; };
+		A46394AB262630310098D2EA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46394AA262630310098D2EA /* AssetsLibrary.framework */; };
+		A46394AF262630620098D2EA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A46394AD2626304C0098D2EA /* libiconv.tbd */; };
+		A46394B3262630F90098D2EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463949A26251BC20098D2EA /* AVFoundation.framework */; };
+		A46394B52626310B0098D2EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463949126251B870098D2EA /* AudioToolbox.framework */; };
+		A46394B82626313A0098D2EA /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463948C26251B6B0098D2EA /* VideoToolbox.framework */; };
+		A46394BA262633810098D2EA /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463948626251B2E0098D2EA /* GStreamer.framework */; };
+		A46394BB262633810098D2EA /* GStreamer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A463948626251B2E0098D2EA /* GStreamer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A46394BC262633810098D2EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A46394BB262633810098D2EA /* GStreamer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A46394592624F0050098D2EA /* GStreamerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GStreamerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +50,20 @@
 		A46394652624F0060098D2EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A46394682624F0060098D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A463946A2624F0070098D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46394712624F4B00098D2EA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		A46394742624F6DA0098D2EA /* GStreamerSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GStreamerSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		A46394752624F6DB0098D2EA /* gst_ios_init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gst_ios_init.h; sourceTree = "<group>"; };
+		A46394762624F6DB0098D2EA /* gst_ios_init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gst_ios_init.m; sourceTree = "<group>"; };
+		A463948626251B2E0098D2EA /* GStreamer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GStreamer.framework; path = ../../Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework; sourceTree = "<group>"; };
+		A463948B26251B6B0098D2EA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A463948C26251B6B0098D2EA /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		A463949026251B870098D2EA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A463949126251B870098D2EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A463949526251B970098D2EA /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		A463949826251BB80098D2EA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A463949A26251BC20098D2EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A46394AA262630310098D2EA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		A46394AD2626304C0098D2EA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +71,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A463948D26251B6B0098D2EA /* CoreVideo.framework in Frameworks */,
+				A46394B82626313A0098D2EA /* VideoToolbox.framework in Frameworks */,
+				A46394BA262633810098D2EA /* GStreamer.framework in Frameworks */,
+				A46394B3262630F90098D2EA /* AVFoundation.framework in Frameworks */,
+				A46394AF262630620098D2EA /* libiconv.tbd in Frameworks */,
+				A463949226251B870098D2EA /* CoreAudio.framework in Frameworks */,
+				A46394B52626310B0098D2EA /* AudioToolbox.framework in Frameworks */,
+				A46394AB262630310098D2EA /* AssetsLibrary.framework in Frameworks */,
+				A463949926251BB80098D2EA /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +91,7 @@
 			children = (
 				A463945B2624F0050098D2EA /* GStreamerSwift */,
 				A463945A2624F0050098D2EA /* Products */,
+				A463948526251B2E0098D2EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +113,29 @@
 				A46394652624F0060098D2EA /* Assets.xcassets */,
 				A46394672624F0060098D2EA /* LaunchScreen.storyboard */,
 				A463946A2624F0070098D2EA /* Info.plist */,
+				A46394712624F4B00098D2EA /* README.md */,
+				A46394752624F6DB0098D2EA /* gst_ios_init.h */,
+				A46394762624F6DB0098D2EA /* gst_ios_init.m */,
+				A46394742624F6DA0098D2EA /* GStreamerSwift-Bridging-Header.h */,
 			);
 			path = GStreamerSwift;
+			sourceTree = "<group>";
+		};
+		A463948526251B2E0098D2EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A46394AD2626304C0098D2EA /* libiconv.tbd */,
+				A46394AA262630310098D2EA /* AssetsLibrary.framework */,
+				A463949A26251BC20098D2EA /* AVFoundation.framework */,
+				A463949826251BB80098D2EA /* CoreMedia.framework */,
+				A463949526251B970098D2EA /* Metal.framework */,
+				A463949126251B870098D2EA /* AudioToolbox.framework */,
+				A463949026251B870098D2EA /* CoreAudio.framework */,
+				A463948B26251B6B0098D2EA /* CoreVideo.framework */,
+				A463948C26251B6B0098D2EA /* VideoToolbox.framework */,
+				A463948626251B2E0098D2EA /* GStreamer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +148,7 @@
 				A46394552624F0050098D2EA /* Sources */,
 				A46394562624F0050098D2EA /* Frameworks */,
 				A46394572624F0050098D2EA /* Resources */,
+				A46394BC262633810098D2EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +170,7 @@
 				TargetAttributes = {
 					A46394582624F0050098D2EA = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -126,6 +199,7 @@
 			files = (
 				A46394692624F0060098D2EA /* LaunchScreen.storyboard in Resources */,
 				A46394662624F0060098D2EA /* Assets.xcassets in Resources */,
+				A46394722624F4B00098D2EA /* README.md in Resources */,
 				A46394642624F0050098D2EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46394772624F6DB0098D2EA /* gst_ios_init.m in Sources */,
 				A46394612624F0050098D2EA /* ViewController.swift in Sources */,
 				A463945D2624F0050098D2EA /* AppDelegate.swift in Sources */,
 				A463945F2624F0050098D2EA /* SceneDelegate.swift in Sources */,
@@ -286,14 +361,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52JH6246BW;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk\"";
+				HEADER_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = GStreamerSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esri.sitescan.GStreamerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GStreamerSwift/GStreamerSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +391,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52JH6246BW;
+				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk\"";
+				HEADER_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = GStreamerSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-lresolv",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esri.sitescan.GStreamerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GStreamerSwift/GStreamerSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
