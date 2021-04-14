@@ -22,6 +22,7 @@ The GStreamer SDK installs itself in your home directory, so it is available onl
 `"$(HOME)/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers"`
 - In Framework search path add
 `"$(HOME)/Library/Developer/GStreamer/iPhone.sdk"`
+- In Other Linker Flags add `-lresolv` and `-lc++`
 
 6. In General settings of the target use "+" button in Frameworks, Libraries, and Embedded Content to add libraries:
 - AssetsLibrary, AudioToolbox, AVFoundation, CoreAudio, CoreMedia, CoreVideo, VideoToolbox, libiconv.tbd
