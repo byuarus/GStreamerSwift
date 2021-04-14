@@ -6,5 +6,6 @@
 #define Header_h
 
 #import "gst_ios_init.h"
+#include "GStreamerBackend.h"
 
 #endif

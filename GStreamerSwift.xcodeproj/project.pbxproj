@@ -24,22 +24,9 @@
 		A46394B52626310B0098D2EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463949126251B870098D2EA /* AudioToolbox.framework */; };
 		A46394B82626313A0098D2EA /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463948C26251B6B0098D2EA /* VideoToolbox.framework */; };
 		A46394BA262633810098D2EA /* GStreamer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463948626251B2E0098D2EA /* GStreamer.framework */; };
-		A46394BB262633810098D2EA /* GStreamer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A463948626251B2E0098D2EA /* GStreamer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A46394C2262647B40098D2EA /* GStreamerBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = A46394C1262647B40098D2EA /* GStreamerBackend.m */; };
+		A46394C426264C550098D2EA /* GStreamerVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46394C326264C550098D2EA /* GStreamerVideoViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A46394BC262633810098D2EA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A46394BB262633810098D2EA /* GStreamer.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A46394592624F0050098D2EA /* GStreamerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GStreamerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +51,10 @@
 		A463949A26251BC20098D2EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A46394AA262630310098D2EA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		A46394AD2626304C0098D2EA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		A46394BF262647B30098D2EA /* GStreamerBackendDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackendDelegate.h; sourceTree = "<group>"; };
+		A46394C0262647B40098D2EA /* GStreamerBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GStreamerBackend.h; sourceTree = "<group>"; };
+		A46394C1262647B40098D2EA /* GStreamerBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GStreamerBackend.m; sourceTree = "<group>"; };
+		A46394C326264C550098D2EA /* GStreamerVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GStreamerVideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +107,10 @@
 				A46394712624F4B00098D2EA /* README.md */,
 				A46394752624F6DB0098D2EA /* gst_ios_init.h */,
 				A46394762624F6DB0098D2EA /* gst_ios_init.m */,
+				A46394C0262647B40098D2EA /* GStreamerBackend.h */,
+				A46394C326264C550098D2EA /* GStreamerVideoViewController.swift */,
+				A46394C1262647B40098D2EA /* GStreamerBackend.m */,
+				A46394BF262647B30098D2EA /* GStreamerBackendDelegate.h */,
 				A46394742624F6DA0098D2EA /* GStreamerSwift-Bridging-Header.h */,
 			);
 			path = GStreamerSwift;
@@ -148,7 +143,6 @@
 				A46394552624F0050098D2EA /* Sources */,
 				A46394562624F0050098D2EA /* Frameworks */,
 				A46394572624F0050098D2EA /* Resources */,
-				A46394BC262633810098D2EA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +207,8 @@
 			files = (
 				A46394772624F6DB0098D2EA /* gst_ios_init.m in Sources */,
 				A46394612624F0050098D2EA /* ViewController.swift in Sources */,
+				A46394C2262647B40098D2EA /* GStreamerBackend.m in Sources */,
+				A46394C426264C550098D2EA /* GStreamerVideoViewController.swift in Sources */,
 				A463945D2624F0050098D2EA /* AppDelegate.swift in Sources */,
 				A463945F2624F0050098D2EA /* SceneDelegate.swift in Sources */,
 			);
@@ -364,7 +360,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52JH6246BW;
+				DEVELOPMENT_TEAM = 75Z67E6SV2;
 				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk\"";
 				HEADER_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = GStreamerSwift/Info.plist;
@@ -377,7 +373,7 @@
 					"-lresolv",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esri.sitescan.GStreamerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byuarus.GStreamerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GStreamerSwift/GStreamerSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -394,7 +390,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52JH6246BW;
+				DEVELOPMENT_TEAM = 75Z67E6SV2;
 				FRAMEWORK_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk\"";
 				HEADER_SEARCH_PATHS = "\"$(HOME)/Library/Developer/GStreamer/iPhone.sdk/GStreamer.framework/Headers\"";
 				INFOPLIST_FILE = GStreamerSwift/Info.plist;
@@ -407,7 +403,7 @@
 					"-lresolv",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esri.sitescan.GStreamerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byuarus.GStreamerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "GStreamerSwift/GStreamerSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
